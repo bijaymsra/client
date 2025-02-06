@@ -8,7 +8,7 @@ export default function UserForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8080/api/users", {
+    const response = await fetch("https://babu.up.railway.app/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, age: parseInt(age) }), // Convert age to number
